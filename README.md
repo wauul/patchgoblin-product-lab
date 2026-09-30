@@ -1,2 +1,5 @@
-# patchgoblin-product-lab
-Public seeded fixtures for real PatchGoblin GitHub App, Node CI and continuous maintenance verification. Intentional CI failures are labeled.
+# PatchGoblin product lab
+
+Public, deliberately seeded verification fixtures. This is not a customer repository.
+
+Root commands: `npm ci`, `npm run test`, `npm run lint`, `npm run build`. Initially there is no CI. Later commits intentionally add customized CI, a new package, and dependency-install failures.

@@ -1,0 +1,14 @@
+{
+  "name": "patchgoblin-product-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22 <25"
+  },
+  "scripts": {
+    "test": "node --test",
+    "lint": "node --check src/math.js",
+    "build": "node scripts/build.mjs"
+  }
+}
