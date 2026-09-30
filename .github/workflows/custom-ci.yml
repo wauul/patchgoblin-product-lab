@@ -1,0 +1,23 @@
+# Hand-written customization: preserve this comment and the report step.
+name: Customized root CI
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  root:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run test
+      - run: npm run lint
+      - run: npm run build
+      - name: Hand-written report
+        run: echo 'Do not overwrite this custom report'
