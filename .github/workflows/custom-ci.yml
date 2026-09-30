@@ -1,4 +1,4 @@
-# Hand-written customization: preserve this comment and the report step.
+# Deliberately seeded simple failure fixture; main retains its custom report.
 name: Customized root CI
 on: [push, pull_request]
 permissions:
@@ -18,6 +18,5 @@ jobs:
       - run: npm ci
       - run: npm run test
       - run: npm run lint
+      - run: npm run typecheck
       - run: npm run build
-      - name: Hand-written report
-        run: echo 'Do not overwrite this custom report'
